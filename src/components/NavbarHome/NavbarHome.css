@@ -1,0 +1,75 @@
+
+.navbar-background {
+    background: #FFBB5C;
+    
+}
+
+.navbar-color {
+    color:#C63D2F;
+    font-weight: 700;
+}
+
+.logo-color {
+    background: none;
+}
+
+.padding-right {
+    padding-right: 25px;
+}
+
+.navbar-word-color-home {
+    color:#C63D2F;
+    border-radius: 10px;
+    font-size: larger;
+    font-weight: 400;
+}
+
+.navbar-word-color-cart{
+    color:#C63D2F;
+    font-size: larger;
+    font-weight: 400;
+    border-radius: 10px;
+}
+
+
+.navbar-word-color-home:hover, .navbar-word-color-cart:hover{
+    border-radius: 10px;
+    color:#FFBB5C;
+    background: #C63D2F;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .logout-font {
+    color:#C63D2F;
+    font-size: larger;
+    font-weight: 400;
+  }
+
+  .nav-link {
+    color:#C63D2F;
+  }
+
+ 
