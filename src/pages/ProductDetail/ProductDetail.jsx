@@ -30,20 +30,26 @@ useEffect(()=>{
   return (
     <div>
         {  loading ?(<div>...loading</div>) :
-        ( <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={singleProduct.thumbnail} />
-                <Card.Body>
-                    <Card.Title>{singleProduct.title}</Card.Title>
-                    <Card.Text>
-                   {singleProduct.description}
-                    </Card.Text>
-                    <Card.Text>
-                    &#8377;{singleProduct.price*50}
-                    </Card.Text>
-                    <Link ><Button  variant="primary">AddtoCart</Button></Link>
-                </Card.Body>
+        ( 
+            <div>
+                <div className="col-md-6">
+
+                </div>
+            </div>
+        // <Card style={{ width: '18rem' }}>
+        //         <Card.Img variant="top" src={singleProduct.thumbnail} />
+        //         <Card.Body>
+        //             <Card.Title>{singleProduct.title}</Card.Title>
+        //             <Card.Text>
+        //            {singleProduct.description}
+        //             </Card.Text>
+        //             <Card.Text>
+        //             &#8377;{singleProduct.price*50}
+        //             </Card.Text>
+        //             <Link ><Button  variant="primary">AddtoCart</Button></Link>
+        //         </Card.Body>
                 
-                </Card>
+        //         </Card>
             )    
         }
     </div>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'font-awesome/css/font-awesome.min.css';
+// import 'font-awesome/css/font-awesome.min.css';
 import './App.css';
-import { BrowserRouter as Router, Routes,Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes,Route } from "react-router-dom";
 import NavbarHome from './components/NavbarHome/NavbarHome';
 import Home from './pages/Home/Home';
 import SignIn from './pages/SignIn/SignIn';

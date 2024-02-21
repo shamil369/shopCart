@@ -26,18 +26,25 @@ function Products() {
         return obj
     }).map((obj)=>(
         
-            <div className='col-md-3 card-width'>
-                <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" className="img-fit" width={100} height={180} src={obj.thumbnail} />
+            <div className='col-md-3 col-sm-6 mb-4 '>
+                <Card style={{ width: '18rem' }} className='h-100 text-center p-4 card-background' key={obj.id}>
+                <div className="cont">
+                <Card.Img variant="top" className="img-fit image-view"  height={250} src={obj.thumbnail} />
+                <div className="middle">
+                    <div className="text">
+                        
+                    </div>
+                </div>
+                </div>
                 <Card.Body>
-                    <Card.Title>{obj.title}</Card.Title>
+                    <Card.Title className="mb-1">{obj.title.substring(0,12)}</Card.Title>
                     <Card.Text>
-                   {obj.description && obj.description.substring(0,100)}...
+                   {obj.category && obj.category}
                     </Card.Text>
                     <Card.Text>
                     &#8377;{obj.price*50}
                     </Card.Text>
-                    <Link to={`/productDetail/${obj.id}`}><Button  variant="primary">AddtoCart</Button></Link>
+                    <Link to={`/productDetail/${obj.id}`} className='mb-0'><Button  variant="primary" className="view-btn">View Product</Button></Link>
                 </Card.Body>
                 
                 </Card>
@@ -45,9 +52,9 @@ function Products() {
         ))
     
   return (
-    <div>
-        <h2>Products</h2>
-    <div className='row'>
+    <div className='container'>
+        <h2 className='display-6 fw-bolder text-center mt-5 mb-3'>Products</h2>
+    <div className='row justify-content-center'>
         {cards}
 
     </div>

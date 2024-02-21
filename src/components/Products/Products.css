@@ -1,7 +1,52 @@
-img-fit {
+/* .img-fit {
     object-fit: contain;
+} */
+
+.card-background {
+    background: #e25f3e5a;
+    
+    transition: all ease-in-out 0.1s;
 }
 
-.card-width {
-    background: yellow;
+.card-background:hover {
+    box-shadow: 1px 1px 10px 1px rgba(62, 60, 60, 0.486); 
+    transform: scale(1.04);
 }
+
+.view-btn {
+    background: #C63D2F;
+    color:#FFBB5C;
+    
+    border:none;
+}
+
+.cont {
+    position: relative;
+    width: 100%;
+    background:white;
+  }
+
+.image-view {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+
+  .cont:hover .image-view {
+    opacity: 0.3;
+  }
+  
+  .cont:hover .middle {
+    opacity: 1;
+  }
