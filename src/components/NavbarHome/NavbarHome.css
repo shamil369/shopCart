@@ -24,16 +24,23 @@
     font-weight: 400;
 }
 
-.navbar-word-color-cart{
+.navbar-word-color-sign-in{
     color:#C63D2F;
     font-size: larger;
     font-weight: 400;
     border-radius: 10px;
 }
 
+.navbar-word-color-sign-up{
+  color:#C63D2F;
+  font-size: larger;
+  font-weight: 400;
+  border-radius: 10px;
+}
 
-.navbar-word-color-home:hover, .navbar-word-color-cart:hover{
-    border-radius: 10px;
+
+.navbar-nav .nav-link.active{
+    
     color:#FFBB5C;
     background: #C63D2F;
 }
