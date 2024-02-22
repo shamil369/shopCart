@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react'
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import { useDispatch,useSelector} from 'react-redux';
-import { selectedProduct } from '../../redux/actions';
+import { selectedProduct, addToCart,addWishList } from '../../redux/actions';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Link} from 'react-router-dom';
@@ -28,31 +28,30 @@ useEffect(()=>{
 },[id])
 
   return (
-    <div>
-        {  loading ?(<div>...loading</div>) :
-        ( 
-            <div>
-                <div className="col-md-6">
-
+    <div className=''>
+        <div className='container my-5 py-5'>
+            {  loading ?(<div>...loading</div>) :
+            ( 
+                <div className='row py-4'>
+                    <div className="col-md-6">
+                        <img src={singleProduct.thumbnail} alt={singleProduct.title} height="400px" width="400px"/>
+                    </div>
+                    <div className='col-md-6'>
+                        <h4 className="text-uppercase text-black-50">{singleProduct.category}</h4>
+                        <h1 className='display-5'>{singleProduct.title} </h1>
+                        <p className='lead fw-bolder'>Rating {singleProduct.rating && singleProduct.rating}<i className="fa fa-star-half-empty"></i></p>
+                        <h3 className='display-6 fw-bold my-4'> &#8377;{singleProduct.price*50}</h3>               
+                        <p className='lead'>{singleProduct.description}</p>
+                        <button className='btn btn-outline-dark mx-2' onClick={()=>dispatch(addToCart(singleProduct))}>Add to Cart</button>
+                        <NavLink to="/cart" className="btn btn-dark">View Cart</NavLink>
+                        <button className='btn btn-outline-dark mx-2' onClick={()=>dispatch(addWishList(singleProduct))}>Add to wishlist</button>
+                    </div>
                 </div>
-            </div>
-        // <Card style={{ width: '18rem' }}>
-        //         <Card.Img variant="top" src={singleProduct.thumbnail} />
-        //         <Card.Body>
-        //             <Card.Title>{singleProduct.title}</Card.Title>
-        //             <Card.Text>
-        //            {singleProduct.description}
-        //             </Card.Text>
-        //             <Card.Text>
-        //             &#8377;{singleProduct.price*50}
-        //             </Card.Text>
-        //             <Link ><Button  variant="primary">AddtoCart</Button></Link>
-        //         </Card.Body>
-                
-        //         </Card>
-            )    
-        }
-    </div>
+      
+                )    
+            }
+        </div>
+     </div>   
   )
 }
 

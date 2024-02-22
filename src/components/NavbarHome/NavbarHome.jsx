@@ -16,7 +16,8 @@ function NavbarHome() {
             <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end padding-right" >
             <Nav className="navbar-right-section">
                 <Nav.Link as={NavLink} to="/" className='navbar-word-color-home hover-underline-animation'>Home</Nav.Link>
-                
+                <Nav.Link as={NavLink} to="/cart" className='navbar-word-color-home hover-underline-animation'>Cart<i className="fa fa-cart-arrow-down"/></Nav.Link>
+                <Nav.Link as={NavLink} to="/favourite" className='navbar-word-color-home hover-underline-animation'>WishList <i className="fa fa-heart"/></Nav.Link>
                 <Nav.Link as={NavLink} to="/signin" className='navbar-word-color-sign-in  hover-underline-animation '>Sign In</Nav.Link>
                 <Nav.Link as={NavLink} to="/signup" className='navbar-word-color-sign-up hover-underline-animation'>Sign Up</Nav.Link>
 

@@ -31,3 +31,59 @@ export const selectedProductReducer = (state={},action)=>{
 }
 
 }
+
+const cart=[];
+export const cartReducer =(state=cart,action)=>{
+
+        switch(action.type){
+            case "ADD_TO_CART":
+                const exist = state.find(x=> x.id===action.payload.id)
+                if(exist){
+                    return state.map(obj=>obj.id===action.payload.id ? {...obj,quantity:obj.quantity+1} : obj)
+                }else{
+                    return [
+                        ...state,{ ...action.payload, quantity:1}
+                    ]
+                }
+                break;
+
+            case "DELETE_FROM_CART":
+                    const existItem = state.find(x=> x.id === action.payload.id)
+                    if(existItem.quantity===1){
+                        return state.filter(obj=>obj.id !== action.payload.id)
+                    }else{
+                        return state.map(obj=>obj.id === action.payload.id ? {...obj,quantity:obj.quantity-1} : obj)
+                    }
+                    break;
+            
+            case "REMOVE_FROM_CART":
+                    return state.filter(obj=>obj.id !== action.payload.id)
+                    break;
+
+                    
+            default:
+                return state
+                break;        
+        }
+}
+
+export const wishListReducer=(state=[],action)=>{
+        switch(action.type){
+            case "ADD_WISH":
+                const existwish = state.find(x=> x.id===action.payload.id);
+                if(existwish){
+                    return state;
+                }else{
+                  return  [...state, action.payload]
+                }
+                break;
+            
+            case "REMOVE_WISH":
+                return state.filter(obj=>obj.id!==action.payload.id)
+                break;
+                
+            default:
+                return state
+                break;    
+            }
+}

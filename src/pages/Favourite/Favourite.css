@@ -1,0 +1,27 @@
+.background-body {
+    background-color:rgb(182, 179, 179);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+}
+
+.wavi {
+    position: relative;
+  }
+
+  .wavi span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color:black;
+    text-transform: uppercase;
+    animation: flip 4s infinite;
+    animation-delay: calc(.10s * var(--i))
+  }
+
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }

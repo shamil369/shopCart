@@ -26,7 +26,7 @@ function Products() {
         return obj
     }).map((obj)=>(
         
-            <div className='col-md-3 col-sm-6 mb-4 '>
+            <div className='col-sm-6 col-md-3 mb-4  '>
                 <Card style={{ width: '18rem' }} className='h-100 text-center p-4 card-background' key={obj.id}>
                 <div className="cont">
                 <Card.Img variant="top" className="img-fit image-view"  height={250} src={obj.thumbnail} />
@@ -54,7 +54,8 @@ function Products() {
   return (
     <div className='container'>
         <h2 className='display-6 fw-bolder text-center mt-5 mb-3'>Products</h2>
-    <div className='row justify-content-center'>
+        <div><label></label></div>
+    <div className='row justify-content-center '>
         {cards}
 
     </div>
