@@ -1,28 +1,19 @@
-
-.background-loading {
-    /* background-color:rgb(182, 179, 179); */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 30vh;
+.color-bg {
+  background: #ff9c50b0;
+  border-radius: 5px;
+  box-shadow: 1px 1px 8px 1px rgba(41, 41, 41, 0.301);
 }
 
-.waviy-load {
-    position: relative;
-  }
+.button-product {
+  color: #ffbb5c;
+  background: #c63d2f;
+  border: #c63d2f;
+  padding: 8px 8px 8px 8px;
+  border-radius: 5px;
+  outline: #c63d2f;
+}
 
-  .waviy-load span {
-    position: relative;
-    display: inline-block;
-    font-size: 40px;
-    color:black;
-    text-transform: uppercase;
-    animation: flip 4s infinite;
-    animation-delay: calc(.14s * var(--i))
-  }
-
-  @keyframes flip {
-    0%,80% {
-      transform: rotateY(360deg) 
-    }
-  }
+.button-product:hover {
+  background: #ffbb5c;
+  color: BLACK;
+}

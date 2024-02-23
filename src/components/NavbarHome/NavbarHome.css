@@ -1,82 +1,75 @@
-
 .navbar-background {
-    background: #FFBB5C;
-    
+  background: #ffbb5c;
 }
 
 .navbar-color {
-    color:#C63D2F;
-    font-weight: 700;
+  color: #c63d2f;
+  font-weight: 700;
 }
 
 .logo-color {
-    background: none;
+  background: none;
 }
 
 .padding-right {
-    padding-right: 25px;
+  padding-right: 25px;
 }
 
 .navbar-word-color-home {
-    color:#C63D2F;
-    border-radius: 10px;
-    font-size: larger;
-    font-weight: 400;
+  color: #c63d2f;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: 400;
 }
 
-.navbar-word-color-sign-in{
-    color:#C63D2F;
-    font-size: larger;
-    font-weight: 400;
-    border-radius: 10px;
-}
-
-.navbar-word-color-sign-up{
-  color:#C63D2F;
+.navbar-word-color-sign-in {
+  color: #c63d2f;
   font-size: larger;
   font-weight: 400;
   border-radius: 10px;
 }
 
+.navbar-word-color-sign-up {
+  color: #c63d2f;
+  font-size: larger;
+  font-weight: 400;
+  border-radius: 10px;
+}
 
-.navbar-nav .nav-link.active{
-    
-    color:#FFBB5C;
-    background: #C63D2F;
+.navbar-nav .nav-link.active {
+  color: #ffbb5c;
+  background: #c63d2f;
 }
 
 .hover-underline-animation {
-    display: inline-block;
-    position: relative;
-    
-  }
-  
-  .hover-underline-animation::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: black;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-  
-  .hover-underline-animation:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+  display: inline-block;
+  position: relative;
+}
 
-  .logout-font {
-    color:#C63D2F;
-    font-size: larger;
-    font-weight: 400;
-  }
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
 
-  .nav-link {
-    color:#C63D2F;
-  }
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
- 
+.logout-font {
+  color: #c63d2f;
+  font-size: larger;
+  font-weight: 400;
+}
+
+.nav-link {
+  color: #c63d2f;
+}

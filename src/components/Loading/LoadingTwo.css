@@ -1,0 +1,39 @@
+.Loading-two-popup {
+    position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+background: rgba(0, 0, 0, 0.712);
+display:flex;
+justify-content: center;
+align-items: center;
+}
+
+.background-loading {
+    /* background-color:rgb(182, 179, 179); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+}
+
+.waviy-load {
+    position: relative;
+  }
+
+  .waviy-load span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color:black;
+    text-transform: uppercase;
+    animation: flip 4s infinite;
+    animation-delay: calc(.14s * var(--i))
+  }
+
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }

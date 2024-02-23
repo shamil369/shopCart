@@ -1,49 +1,78 @@
-
 .card-background {
-    background: #e25f3e5a;
-    
-    transition: all ease-in-out 0.1s;
+  background: #e25f3e5a;
+  transition: all ease-in-out 0.1s;
 }
 
 .card-background:hover {
-    box-shadow: 1px 1px 10px 1px rgba(62, 60, 60, 0.486); 
-    transform: scale(1.04);
+  box-shadow: 1px 1px 10px 1px rgba(62, 60, 60, 0.486);
+  transform: scale(1.04);
 }
 
 .view-btn {
-    background: #C63D2F;
-    color:#FFBB5C;
-    
-    border:none;
+  background: #c63d2f;
+  color: #ffbb5c;
+  border: none;
 }
 
 .cont {
-    position: relative;
-    width: 100%;
-    background:white;
-  }
+  position: relative;
+  width: 100%;
+  background: white;
+}
 
 .image-view {
-    opacity: 1;
-    display: block;
-    transition: .5s ease;
-    backface-visibility: hidden;
-  }
+  opacity: 1;
+  display: block;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
 
-  .middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%)
-  }
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
 
-  .cont:hover .image-view {
-    opacity: 0.3;
-  }
-  
-  .cont:hover .middle {
-    opacity: 1;
-  }
+.cont:hover .image-view {
+  opacity: 0.3;
+}
+
+.cont:hover .middle {
+  opacity: 1;
+}
+
+.search {
+  display: flex;
+  margin-top: 6px;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #c63d2f;
+  border-right: none;
+  padding: 5px;
+  height: 40px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #020504;
+}
+
+.searchTerm:focus {
+  color: black;
+}
+
+.searchButton {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #c63d2f;
+  background: #c63d2f;
+  text-align: center;
+  color: black;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
