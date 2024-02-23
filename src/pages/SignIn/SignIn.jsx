@@ -1,11 +1,30 @@
+/*global google*/
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import './SignIn.css'
+import {jwtDecode} from 'jwt-decode';
 
 function SignIn() {
   const [emailLogin,setEmailLogin] = useState('');
   const [passwordLogin,setPasswordLogin] = useState('');
+
+    function handleCallbackResponse(response){
+        console.log("encoded jwt", response.credential)
+        var userObject = jwtDecode(response.credential)
+        console.log("decode jwt", userObject)
+    }
+
+  useEffect(()=>{
+    google.accounts.id.initialize({
+        client_id:"529555787512-7qjj885khmf24kem6t00m4nin7lfanof.apps.googleusercontent.com",
+        callback:handleCallbackResponse
+    })
+
+    google.accounts.id.renderButton(
+        document.getElementById("g-sign"),
+        {theme:"filled_blue",size:"large",width:"260px"})
+  },[])
  
   return (
     <div className="signin-box">
@@ -29,8 +48,11 @@ function SignIn() {
         <div className="create-forgot-div">
             <Link className="text-decor" to="/Signup">Create Account&nbsp;</Link>|<Link className="text-decor">&nbsp;Forgot Password?</Link>
         </div>
+        <div className="g-sign mt-3" id="g-sign">
+       </div>
     </div>
-
+   
+       
 </div>
   )
 }

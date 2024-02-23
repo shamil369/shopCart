@@ -5,6 +5,7 @@ import { selectedProduct, addToCart,addWishList } from '../../redux/actions';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Link} from 'react-router-dom';
+import './ProductDetail.css'
 function ProductDetail() {
 
 const {id} = useParams();
@@ -30,7 +31,20 @@ useEffect(()=>{
   return (
     <div className=''>
         <div className='container my-5 py-5'>
-            {  loading ?(<div>...loading</div>) :
+            {  loading ?(  <div className='background-loading'>
+            <div className="waviy-load">
+                <span style={{'--i': 1}}>L</span>
+                <span style={{'--i': 2}}>o</span>
+                <span style={{'--i': 3}}>a</span>
+                <span style={{'--i': 4}}>d</span>
+                <span style={{'--i': 5}}>i</span>
+                <span style={{'--i': 6}}>n</span>
+                <span style={{'--i': 7}}>g</span>
+                <span style={{'--i': 8}}>.</span>
+                <span style={{'--i': 9}}>.</span>
+                <span style={{'--i': 10}}>.</span>
+            </div>
+           </div>) :
             ( 
                 <div className='row py-4'>
                     <div className="col-md-6">
